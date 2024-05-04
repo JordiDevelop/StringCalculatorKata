@@ -38,5 +38,12 @@ namespace String.Tests
             var result = StringCalculator.Add(value);
             Assert.Equal(expectedResult, result);
         }
+        
+        [Fact]
+        public void ReturnSumIfMoreThanTwoSeparator()
+        {
+            var result = StringCalculator.Add("1,2\n3");
+            Assert.Equal(6, result);
+        }
     }
 }
