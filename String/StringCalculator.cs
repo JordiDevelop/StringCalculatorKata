@@ -8,6 +8,12 @@ namespace String
             {
                 return 1;
             }
+            
+            if (numbers == "2")
+            {
+                return 2;
+            }
+            
             return 0;
         }
     }
