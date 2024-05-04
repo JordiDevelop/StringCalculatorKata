@@ -30,9 +30,9 @@ namespace String.Tests
         }
         
         [Theory]
-        [InlineData("1,1,1",2)]
-        [InlineData("1,2,3",3)]
-        [InlineData("2,2,3,5",4)]
+        [InlineData("1,1,1",3)]
+        [InlineData("1,2,3",6)]
+        [InlineData("2,2,3,5",12)]
         public void ReturnSumIfMoreThanTwoNumbers(string value, int expectedResult)
         {
             var result = StringCalculator.Add(value);
