@@ -22,5 +22,13 @@ namespace String.Tests
             var result = StringCalculator.Add("2");
             Assert.Equal(2, result);
         }
+        
+                
+        [Fact]
+        public void Return3IfOnlyNumber3()
+        {
+            var result = StringCalculator.Add("3");
+            Assert.Equal(3, result);
+        }
     }
 }
