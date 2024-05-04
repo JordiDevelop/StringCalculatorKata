@@ -4,9 +4,13 @@ namespace String
     {
         public static int Add(string numbers)
         {
-            var requestNumbers2 = numbers.Split(',', StringSplitOptions.RemoveEmptyEntries);
-            if (requestNumbers2.Length < 1) return 0;
-            
+            if (string.IsNullOrEmpty(numbers))
+            {
+                return 0;
+            }
+
+            var requestNumbers2 = numbers.Split(',', '\n');
+
             int total = 0;
             foreach (var number in requestNumbers2)
             {
