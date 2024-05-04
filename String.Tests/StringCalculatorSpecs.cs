@@ -28,5 +28,15 @@ namespace String.Tests
             var result = StringCalculator.Add(value);
             Assert.Equal(expectedResult, result);
         }
+        
+        [Theory]
+        [InlineData("1,1,1",2)]
+        [InlineData("1,2,3",3)]
+        [InlineData("2,2,3,5",4)]
+        public void ReturnSumIfMoreThanTwoNumbers(string value, int expectedResult)
+        {
+            var result = StringCalculator.Add(value);
+            Assert.Equal(expectedResult, result);
+        }
     }
 }
