@@ -14,6 +14,11 @@ namespace String
                 return 2;
             }
             
+            if (numbers == "3")
+            {
+                return 3;
+            }
+            
             return 0;
         }
     }
