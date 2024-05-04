@@ -4,18 +4,12 @@ namespace String
     {
         public static int Add(string numbers)
         {
-            if (numbers == "1,1")
+            var requestNumbers = numbers.Split(',', StringSplitOptions.RemoveEmptyEntries);
+            if (requestNumbers.Length == 2)
             {
-                return 2;
+                return Int32.Parse(requestNumbers[0]) + Int32.Parse(requestNumbers[1]);
             }
-            if (numbers == "1,2")
-            {
-                return 3;
-            }
-            if (numbers == "2,2")
-            {
-                return 4;
-            }
+            
             if (!string.IsNullOrEmpty(numbers))
             {
                 return int.Parse(numbers);
