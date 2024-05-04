@@ -9,26 +9,14 @@ namespace String.Tests
             Assert.Equal(0, result);
         }
         
-        [Fact]
-        public void ReturnNumbersIfOnlyOneNumber()
+        [Theory]
+        [InlineData(1)]
+        [InlineData(2)]
+        [InlineData(3)]
+        public void ReturnNumbersIfOnlyOneNumber(int number)
         {
-            var result = StringCalculator.Add("1");
-            Assert.Equal(1, result);
-        }
-        
-        [Fact]
-        public void Return2IfOnlyNumber2()
-        {
-            var result = StringCalculator.Add("2");
-            Assert.Equal(2, result);
-        }
-        
-                
-        [Fact]
-        public void Return3IfOnlyNumber3()
-        {
-            var result = StringCalculator.Add("3");
-            Assert.Equal(3, result);
+            var result = StringCalculator.Add(number.ToString());
+            Assert.Equal(number, result);
         }
     }
 }
